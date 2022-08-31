@@ -1,0 +1,241 @@
+/*--Para toda la pagina--*/
+*{
+    margin:0;
+    color: white;
+    padding:0;
+    font-family:Comfortaa;
+    
+
+}
+
+/*--Armado de la estructura--*/
+#estructura{
+    display: grid;
+    grid-template-areas: 
+    "header header  header"
+    "promo promo  promo"
+    "destacado  destacado destacado"
+    "footer footer  footer"
+    ;
+  
+  grid-template-rows: 180px 400px 100px 100px ;
+  grid-template-columns: 100% ;
+  grid-row-gap: 40px;
+ 
+}
+
+body{ 
+    background: rgb(251,131,147);
+    background: radial-gradient(circle, rgba(251,131,147,1) 0%, rgba(95,101,115,1) 100%);
+}
+/*-- Parte superior logo,nombre,barra de navegacion --*/
+header {
+    grid-area: header;
+    background-color: #db4646b8;
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    -webkit-caja-sombra: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+   
+}
+
+.loquito{
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    width: 80px;
+    
+}
+.titulo{
+    display: flex;
+    align-items: flex-end;
+    font-family:Comfortaa;
+    font-size: 25px;
+}
+
+/*barra de navegacion*/
+nav{
+    display: flex;
+    justify-content: flex-end
+
+}
+ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;    
+    }
+
+    /*el hijo de ul es li*/
+
+     ul li{
+        
+        border: 2px outset #f71735;
+         display: inline-block;
+         padding:0px 10px;
+         transition: all 1s ease;
+     }
+    /*el hijo de ul es li y el nieto de ul es a*/
+    ul li a {
+        text-decoration: none;
+        font-family:Comfortaa;;
+        font-size: 12px;;
+        color:#30343F;
+        font-style:bold 700;
+        text-transform: uppercase;
+        
+    }
+
+    ul li:hover{
+        transition: all 1s ease;
+        transform: scale(0.5);
+    }
+/*-- Promo y destacado --*/
+
+#promo{
+    grid-area: promo;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    font-family:Comfortaa;  
+    margin-top: 200px;  
+    align-items: center;
+   
+}
+
+.img1{
+    margin: 20px;
+    height: auto;
+    width:500px;
+    transition: all 1s ease;
+}
+
+.img1:hover{
+    transition: all 1s ease;
+    transform: rotate( 10deg);
+}
+
+.img2{
+    height: 300px;
+    width: auto;
+}
+
+
+#destacado{
+    grid-area:productos;
+    display: flex;
+    flex-direction: column;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1px );
+-webkit-backdrop-filter: blur( 1px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+align-items: center;
+padding: 10px;
+    
+}
+/* CARD */
+.card{
+    display: flex;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 10px 8px 19px -7px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 10px 8px 19px -7px rgba(0,0,0,0.58);
+    -moz-box-shadow: 10px 8px 19px -7px rgba(0,0,0,0.58); 
+   flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: all 1s ease;
+   
+}
+
+.card img{
+    display: flex;
+    width:100px;
+    height:auto;
+    object-fit:cover;
+    margin:10px;
+}
+.card a{
+    background: #f71735;
+    color:white;
+    padding:8px 20px;
+    border-radius:4px;
+    margin-top:10px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+    margin: 30px;
+    padding: 0px 10px;
+}
+.card:hover{
+transition: all 1s ease;
+transform: scale(2);
+}
+
+
+
+/*-- Parte inverior, redes-contacto --*/
+footer{
+    grid-area:footer;
+    background-color: #db4646db;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    color: #30343f;
+    margin-top: 300px;
+    padding: 10px;
+    box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+-webkit-caja-sombra: -1px 10px 22px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    
+}
+
+
+
+footer a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none ;
+    list-style-type: none;
+    color: #30343f;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+}
+
+.letra2{ 
+    font-size: 20px;
+    flex-direction: row;
+   } 
+
+.logored{
+
+    height: 40px;
+    width: 40px;
+    padding: 6px;
+}
+
+   .ubicacion{
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    width: 200px;
+    height: auto;
+   }
